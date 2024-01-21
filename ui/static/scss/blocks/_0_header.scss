@@ -1,0 +1,27 @@
+.header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 10px #e0e3e7;
+}
+
+.header__box {
+}
+.header__menu {
+}
+.header__ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 100px;
+    text-align: center;
+    li{
+        padding: 10px;
+    }
+    a{
+        font-size: 14px;
+        color: #605E5E;
+    }
+}
