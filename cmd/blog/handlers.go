@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"text/template"
@@ -43,7 +44,7 @@ func (h *handlers) Home(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *handlers) Contact(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("contact"))
+	fmt.Fprintf(w, "contact")
 }
 
 func (h *handlers) About(w http.ResponseWriter, r *http.Request) {

@@ -1,0 +1,27 @@
+.mainFon {
+    padding-top: 48px;
+    background-image: url("../img/mainHeader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+.container {
+}
+.mainFon__box {
+    padding-top: 30px;
+}
+.mainFon__title {
+    font-size: 24px;
+    color: #2f2e2e;
+    font-weight: 450;
+    text-align: center;
+    background-color: #c1c1c1;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px 10px;
+    span{
+        font-weight: 10;
+        margin: 0 20px;
+    }
+}

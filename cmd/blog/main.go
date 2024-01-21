@@ -6,9 +6,7 @@ import (
 	"path/filepath"
 )
 
-func main() {
-	h := &handlers{}
-	mux := http.NewServeMux()
+func handlerRequest(h *handlers, mux *http.ServeMux) {
 
 	mux.HandleFunc("/", h.Home)
 	mux.HandleFunc("/about", h.About)
@@ -21,11 +19,18 @@ func main() {
 	mux.Handle("/static", http.NotFoundHandler())                   // Возвращает ошибку 404 для пути /static
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer)) // Обслуживает файлы из /static/
 
+}
+
+func main() {
+	h := &handlers{}
+	mux := http.NewServeMux()
+
+	handlerRequest(h, mux)
+
 	if err := http.ListenAndServe(":8081", mux); err != nil {
 		log.Fatal(err)
 	}
 	log.Println("Сервер успешно запушен на порту 8081")
-
 }
 
 // neuteredFileSystem представляет файловую систему с дополнительной безопасностью
