@@ -1,9 +1,10 @@
+{{define "base"}}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шаблон Блог и подкаст о стиле и дизайне</title>
+    <title>{{template "Title" .}}</title>
     <link rel="stylesheet" href="../static/css/reset.css">
     <link rel="stylesheet" href="../static/css/main.min.css">
 </head>
@@ -14,7 +15,7 @@
                 <div class="header__menu">
                     <ul class="header__ul">
                         <li><a href="/">ГЛАВНАЯ</a></li>
-                        <li><a href="/about">БЛОГ</a></li>
+                        <li><a href="/blog">БЛОГ</a></li>
                         <li><a href="/contact">КОНТАКТЫ</a></li>
                     </ul>
                 </div>
@@ -22,14 +23,9 @@
         </div>
     </header>
     <main class="main">
-        <section class="mainFon">
-            <div class="container">
-                <div class="mainFon__box">
-                    <h1 class="mainFon__title">ДИЗАЙН <span>ДЛЯ</span> ЖИЗНИ</h1>
-                </div>
-            </div>
-        </section>
+        {{template "mainFon" .}}
+        {{template "postContent" .}}
     </main>
-
 </body>
 </html>
+{{end}}

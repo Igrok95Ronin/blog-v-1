@@ -9,7 +9,7 @@ import (
 func handlerRequest(h *handlers, mux *http.ServeMux) {
 
 	mux.HandleFunc("/", h.Home)
-	mux.HandleFunc("/about", h.About)
+	mux.HandleFunc("/blog", h.Blog)
 	mux.HandleFunc("/contact", h.Contact)
 
 	// Создание файлового сервера с настраиваемой файловой системой

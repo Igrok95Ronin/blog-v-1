@@ -1,0 +1,32 @@
+{{template "base" .}}
+
+{{define "Title"}}Блок{{end}}
+{{define "mainFon"}}{{end}}
+{{define "postContent"}}
+    {{range .}}
+        <section class="postContent">
+            <div class="container">
+                <div class="postContent__box">
+                    <div class="postContent__Wrapper">
+                        <div class="postContent__left">
+                            <img class="postContent__img" src="../static/img/content1.jpg" alt="postContent1" >
+                        </div>
+                        <div class="postContent__right">
+                            <div class="postContent__userWrap">
+                                <p class="postContent__name">{{.Author}}</p>
+                                <p class="postContent__user__Date">4 дек. 2022 г. 1 мин.</p>
+                            </div>
+                            <h2 class="postContent__title"><a href="#">{{ .H1 }}</a></h2>
+                            <p class="postContent__dsc">{{ .Description}}</p>
+                            <div class="postContent__bottomLine">
+                                <p class="postContent__view">0 просмотров</p>
+                                <p class="postContent__comments">0 комментариев</p>
+                                <p class="postContent__like">3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{end}}
+{{end}}

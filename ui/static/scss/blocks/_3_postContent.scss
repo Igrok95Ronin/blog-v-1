@@ -1,0 +1,84 @@
+.postContent {
+    margin-top: 70px;
+}
+.postContent__box {
+}
+.postContent__Wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid rgba(204,204,204,0.75);
+    margin-bottom: 20px;
+}
+.postContent__left {
+    max-width: 100%;
+    max-height: 100%;
+}
+.postContent__img {
+    width: 100%;
+    height: 100%;
+}
+.postContent__right {
+    padding: 24px 50px;
+    max-height: 290px;
+}
+.postContent__userWrap {
+    padding: 0 0 12px;
+    padding-left: 50px;
+    font-size: 12px;
+    color: #2F2E2E;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url("../img/emptyFace.png");
+        background-size: cover;
+        width: 32px;
+        height: 32px;
+        left: 0;
+        top: 0;
+    }
+}
+.postContent__name {
+}
+.postContent__user__Date {
+}
+.postContent__title {
+    font-size: 28px;
+    margin: 10px 0;
+    a{
+        color: #2F2E2E;
+        transition: .3s;
+        &:hover{
+            color: blue;
+        }
+    }
+}
+.postContent__dsc {
+    line-height: 20px;
+    margin: 0 0 10px;
+    height: 100%;
+}
+.postContent__bottomLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postContent__view {
+}
+.postContent__comments {
+}
+.postContent__like {
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url("../img/hart.png");
+        background-size: contain;
+        width: 19px;
+        height: 19px;
+        right: -25px;
+    }
+}
